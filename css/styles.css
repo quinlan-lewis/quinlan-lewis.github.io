@@ -7931,6 +7931,14 @@ textarea.form-control-lg {
   padding-bottom: 1.5rem !important;
 }
 
+.py-5-with-pic {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+  background-image: url("../assets/oceanWithBeach.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .py-5 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
@@ -11554,9 +11562,24 @@ html {
   height: 100%;
 }
 
+@keyframes changePosition {
+    from {
+        background-position: left;
+    }
+
+    to {
+        background-position: right;
+    }
+}
+
 .bg-gradient-primary-to-secondary {
-  background: #1e30f3;
-  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+    background: #1e30f3;
+    background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+    background-size: 300%;
+    animation-duration: 2s;
+    animation-name: changePosition;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .text-gradient {
