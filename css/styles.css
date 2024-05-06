@@ -11657,6 +11657,27 @@ html {
   fill: #1e30f3;
 }
 
+.pipe-list ul {
+    text-align: center;
+}
+
+.pipe-list ul li {
+    list-style: none;
+}
+
+.pipe-list li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.pipe-list li::after{
+  content:'\a0 \a0 \a0 \a0 | \a0 ';
+}
+
+.pipe-list ul li:last-of-type::after {
+    content: "";
+}
+
 @media (min-width: 576px) {
   .profile {
     height: 60vw;
