@@ -77,6 +77,7 @@
   --bs-link-hover-color: #1826c2;
   --bs-code-color: #e21e80;
   --bs-highlight-bg: #fff3cd;
+  --bg-position-x: 60vw;
 }
 
 *,
@@ -11564,22 +11565,23 @@ html {
 
 @keyframes changePosition {
     from {
-        background-position: left;
+        background-position: 0 0;
     }
 
     to {
-        background-position: right;
+        background-position: var(--bg-position-x) 0;
     }
 }
 
+.bg-gradient-primary-to-secondary-animated {
+    background: linear-gradient(90deg, var(--bs-primary), var(--bs-secondary), var(--bs-primary));
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    animation: changePosition 3s linear infinite;
+}
+
 .bg-gradient-primary-to-secondary {
-    background: #1e30f3;
-    background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
-    background-size: 300%;
-    animation-duration: 2s;
-    animation-name: changePosition;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+   background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
 }
 
 .text-gradient {
